@@ -10,8 +10,6 @@ import threading
 import accountchange
 import requests
 import sqlite3
-import win32api
-import win32process
 import datetime
 import configparser
 import update_program
