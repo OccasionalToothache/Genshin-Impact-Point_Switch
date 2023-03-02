@@ -3,4 +3,3 @@ requests==2.26.0
 natsort==7.1.1
 Pillow==8.3.1
 configparser==5.1.1
-update-program==0.0.1
