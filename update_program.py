@@ -1,7 +1,4 @@
-import os
-import atexit
 import sys
-import time
 import tkinter as tk
 import requests
 import threading
@@ -21,9 +18,6 @@ class DownloadProgressBar:
     def unclose(self):
         pass
 
-    def updates(self):
-        os.system('start update.bat')
-
     def create_widgets(self):
         self.progress_label = tk.Label(self.root, text="下载进度：0%")
         self.progress_label.pack(pady=10)
@@ -41,12 +35,9 @@ class DownloadProgressBar:
         else:
             if not self.cancelled:
                 messagebox.showinfo("下载完成", "文件已下载完成！")
-                atexit.register(self.updates)
                 sys.exit()
 
     def start_download(self):
-        resp = requests.get('http://www.pyforme.fun/update/update.bat').content
-        open('./update.bat', 'wb').write(resp)
         threading.Thread(target=self.download_file).start()
         self.update_progress_bar()
 
