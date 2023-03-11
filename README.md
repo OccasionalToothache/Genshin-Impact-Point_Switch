@@ -16,6 +16,6 @@
 **找到post地址为://hk4e-sdk.mihoyo.com/hk4e_cn/combo/panda/qrcode/query的，并且返回的数据内stat数值是confirmed的这条数据**
 ![6](6.png)
 **在上面可以找到我们发包时携带的device和米游社的uid以及账号登录的token，复制这些数据时一定不要多复制任何多余符号，即使是引号也不要**
-![7](7.png)
+![7](7.png)\n
 **勾选扫码登录之后点击添加账号，按照顺序依次输入账号的名称，米游社uid，device，账号token**
 **全部完成之后就可以正常登录了**
