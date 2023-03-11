@@ -13,7 +13,7 @@
 ![4](4.png)
 **先把没必要的数据先清空，然后使用米游社或者其他程序扫码登录需要保存的账号，完事之后回到抓包界面并停止抓包**
 ![5](5.png)
-**找到post地址为:http://hk4e-sdk.mihoyo.com/hk4e_cn/combo/panda/qrcode/query?的，并且返回的数据内stat数值是confirmed的这条数据**
+**找到post地址为://hk4e-sdk.mihoyo.com/hk4e_cn/combo/panda/qrcode/query的，并且返回的数据内stat数值是confirmed的这条数据**
 ![6](6.png)
 **在上面可以找到我们发包时携带的device和米游社的uid以及账号登录的token，复制这些数据时一定不要多复制任何多余符号，即使是引号也不要**
 ![7](7.png)
