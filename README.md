@@ -6,7 +6,7 @@
 #### 快捷键:F9打开扫码窗口，F10隐藏窗口, F11显示窗口, F12快速导出当前的账号配置(需手动重命名)
 **预览：**
 
-**快速扫码演示：http://www.pyforme.fun/preview.mp4**
+**快速扫码演示：http://www.pyforme.fun/preview.mp4 (注:视频演示为了展示效果所以使用窗口化，实际全屏化游戏也不会影响扫码)**
 ![1](images/1.png)
 ![2](images/2.png)
 ![3](images/3.png)
