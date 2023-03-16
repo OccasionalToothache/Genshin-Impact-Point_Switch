@@ -7,8 +7,7 @@
 
 **快速扫码演示：http://www.pyforme.fun/preview.mp4 (注:视频演示为了展示效果所以使用窗口化，实际全屏化游戏也不会影响扫码)**  
 **如何选择正确的路径：http://www.pyforme.fun/config.mp4 (如果选择错误可以通过清除配置进行修改，可以通过程序内清除或者删除程序目录下的config.ini文件**  
-**如何切换点位： http://www.pyforme.fun/point_change.mp4 (如果没有作用，请确保选择的路径是否正确，并检查软件是否安装在teleports文件夹内)**  
-**如何添加普通账号： http://www.pyforme.fun/add_account.mp4  (只能添加当前处于登录状态的账号)**  
+**如何切换点位： http://www.pyforme.fun/point_change.mp4 (如果没有作用，请确保选择的路径是否正确，并检查软件是否安装在teleports文件夹内)**   
 **如何添加扫码登录的账号： http://www.pyforme.fun/scanner.mp4  (请确保没有使用任何vpn代理，在扫码框消失之后，请使用手机扫码正常登录一次账号才能获取到其他信息，请勿使用IOS系统的设备扫码登录,第一次使用等待时间较长，请耐心等待)**
 
 ### 如何添加扫码的账号信息(不要使用IOS系统的手机扫码)：
