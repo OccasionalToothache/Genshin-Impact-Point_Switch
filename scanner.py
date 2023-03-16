@@ -3,6 +3,7 @@ import requests
 import cv2
 import numpy as np
 import time
+import tkinter as tk
 from PIL import ImageGrab
 from tkinter import messagebox
 
@@ -11,10 +12,10 @@ def login(account):
     if account:
         detector = cv2.QRCodeDetector()
         WINDOW_NAME = "Scanner"
-        SCAN_AREA = (700, 400, 1200, 800)
+        SCAN_AREA = [755, 390, 1170, 755]
         cv2.namedWindow(WINDOW_NAME, cv2.WINDOW_NORMAL)
         cv2.setWindowProperty(WINDOW_NAME, cv2.WND_PROP_TOPMOST, 1)
-        cv2.resizeWindow(WINDOW_NAME, 500, 400)
+        cv2.resizeWindow(WINDOW_NAME, 415, 365)
         while True:
             screen = np.array(ImageGrab.grab(bbox=SCAN_AREA))
             screen = cv2.cvtColor(screen, cv2.COLOR_BGR2RGB)
@@ -23,8 +24,21 @@ def login(account):
             if data:
                 break
             cv2.imshow(WINDOW_NAME, screen)
-            if cv2.waitKey(1) == 27:
+            key = cv2.waitKey(1)
+            if key == 27:
                 break
+            elif key == ord('a'):
+                SCAN_AREA[0] -= 30
+                SCAN_AREA[2] -= 30
+            elif key == ord('d'):
+                SCAN_AREA[0] += 30
+                SCAN_AREA[2] += 30
+            elif key == ord('w'):
+                SCAN_AREA[1] -= 30
+                SCAN_AREA[3] -= 30
+            elif key == ord('s'):
+                SCAN_AREA[1] += 30
+                SCAN_AREA[3] += 30
         cv2.destroyAllWindows()
         if data:
             ticket = re.findall(r'ticket=(.*)', data)[0]
@@ -46,13 +60,13 @@ def login(account):
         messagebox.showinfo(title='提示', message='请勾选扫码模式并切换一次账号')
 
 
-def addaccount(device, name, gametype):
+def addaccount(device, name):
     detector = cv2.QRCodeDetector()
     WINDOW_NAME = "Scanner"
-    SCAN_AREA = (700, 400, 1200, 800)
+    SCAN_AREA = [755, 390, 1170, 755]
     cv2.namedWindow(WINDOW_NAME, cv2.WINDOW_NORMAL)
     cv2.setWindowProperty(WINDOW_NAME, cv2.WND_PROP_TOPMOST, 1)
-    cv2.resizeWindow(WINDOW_NAME, 500, 400)
+    cv2.resizeWindow(WINDOW_NAME, 415, 365)
     while True:
         screen = np.array(ImageGrab.grab(bbox=SCAN_AREA))
         screen = cv2.cvtColor(screen, cv2.COLOR_BGR2RGB)
@@ -61,8 +75,21 @@ def addaccount(device, name, gametype):
         if data:
             break
         cv2.imshow(WINDOW_NAME, screen)
-        if cv2.waitKey(1) == 27:
+        key = cv2.waitKey(1)
+        if key == 27:
             break
+        elif key == ord('a'):
+            SCAN_AREA[0] -= 30
+            SCAN_AREA[2] -= 30
+        elif key == ord('d'):
+            SCAN_AREA[0] += 30
+            SCAN_AREA[2] += 30
+        elif key == ord('w'):
+            SCAN_AREA[1] -= 30
+            SCAN_AREA[3] -= 30
+        elif key == ord('s'):
+            SCAN_AREA[1] += 30
+            SCAN_AREA[3] += 30
     cv2.destroyAllWindows()
     if data:
         ticket = re.findall(r'ticket=(.*)', data)[0]
@@ -79,7 +106,7 @@ def addaccount(device, name, gametype):
         elif response['data']['stat'] == 'Confirmed':
             uid = re.findall(r'"uid":"(.*?)"', response['data']['payload']['raw'])[0]
             token = re.findall(r'"token":"(.*?)"', response['data']['payload']['raw'])[0]
-            with open(f'./scanner/{name}-{gametype}-S', 'w', encoding='utf-8') as file:
+            with open(f'./scanner/{name}', 'w', encoding='utf-8') as file:
                 file.write(f'uid:{uid}\ndevice:{device}\ntoken:{token}')
             break
         time.sleep(1)
