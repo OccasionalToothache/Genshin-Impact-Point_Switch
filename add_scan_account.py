@@ -9,7 +9,7 @@ import pyperclip
 
 
 def main():
-    browser = webdriver.ChromiumEdge()
+    browser = webdriver.ChromiumEdge(executable_path='./msedgedriver.exe')
     browser.get('https://user.mihoyo.com/#/login/password')
     checkbutton = browser.find_element(by=By.XPATH, value='//*[@id="root"]/div/div[1]/div/p/div')
     checkbutton.click()
