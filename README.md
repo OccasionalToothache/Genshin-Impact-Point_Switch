@@ -1,6 +1,6 @@
 # 原神点位切换器
-### 打包方法：```pyinstaller point_switch1.6.8.spec``` 或者：```nuitka --windows-icon-from-ico=./ico.ico --windows-disable-console --onefile --standalone --enable-plugin=tk-inter --output-dir=out point_switch1.6.8.py```
-### 使用方法：下载releases的安装程序，请注意区分系统版本，不要安装在游戏目录或者作弊目录，选择游戏的启动程序和作弊程序，国际服的转换包需要额外下载，如果你出现注入失败，可以✓上防报错打开(使用此方式打开的作弊程序无法多开)，近期版本多开失败概率很高，等待后续版本更新
+### 打包方法：```pyinstaller point_switch1.6.9.spec``` 或者：```nuitka --windows-icon-from-ico=./ico.ico --windows-disable-console --onefile --standalone --enable-plugin=tk-inter --output-dir=out point_switch1.6.9.py```
+### 使用方法：下载releases的安装程序，请注意区分系统版本，不要安装在游戏目录或者作弊目录，选择游戏的启动程序和作弊程序，国际服的转换包需要额外下载，如果你出现注入失败，可以✓上防报错打开(使用此方式打开的作弊程序可能无法多开)
 #### 如果您是高贵的win11用户，那么很遗憾的告诉您，这该死的系统无法多开作弊
 #### 快捷键:F9打开扫码窗口，F10隐藏窗口, F11显示窗口, F12快速导出当前的账号配置(需手动重命名)
 **视频教程：**
